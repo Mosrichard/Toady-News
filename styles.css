@@ -1,0 +1,466 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+section {
+  padding: 6rem 0;
+}
+
+section h2 {
+  margin-bottom: 2rem;
+}
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 3rem 4rem;
+}
+
+
+/* 1. Flex - Header Navigation */
+
+.header{
+  padding: 1.5rem 0;
+  background-color: #1d1d1d;
+  color: #fff;
+}
+
+.header-logo{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header-nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1500px;
+  padding: 0 4rem;
+  margin: 0 auto;
+}
+
+.header-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header-links a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.header-links a:hover{
+  color: #9c9c9c;
+  transition: .3s;
+}
+
+
+
+
+/* 2. Flex and Column - Featured Section */
+
+.featured {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin: 0;
+  height: 600px;
+}
+
+.featured-image{
+  flex-basis: 50%;
+  height: 100%;
+  background-color: #e0e0e0;
+  border-radius: 2px;
+}
+
+.featured-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.featured-content{
+  flex-basis: 50%;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.featured-more{
+  color: #fff;
+  background-color: #1d1d1d;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.featured-more:hover{
+  background-color: #414141;
+  color: #d9d8d8;
+  
+}
+
+.featured-footer{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.featured-content{
+  color: #4d4d4d;
+}
+
+/* 3. Flex/Grid List - Latest Cards */
+
+.latest{
+  padding: 6rem 0;
+  background-color: #f5f5f5;
+  width: 100%;
+}
+
+.latest-title{
+  margin-bottom: 1rem;
+}
+
+.latest-subtitle{
+  margin-bottom: 2rem;
+  color: #666666;
+}
+
+/* .latest-list{
+  display: grid;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+} */
+
+.latest-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+.latest-card{
+  /* min-width: 300px;
+  height: 500px; */
+  border-radius: 8px;
+  box-shadow: none;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.latest-card img{
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.latest-content{
+  padding: 1.5rem;
+}
+
+.latest-content h3{
+  margin-bottom: 1rem;
+}
+
+.latest-content p{
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+.latest-more {
+  text-decoration: none;
+  font-weight: bold;
+  padding-right: 1.5rem;
+}
+
+
+/* 4. Flex/Grid 2D - Hot News */
+
+.hot{
+  background-color: #1d1d1d;
+  color: #fff;
+}
+
+.hot-title{
+  margin-bottom: 1rem;
+}
+
+.hot-subtitle{
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+.hot-card{
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.hot-card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hot-flex{
+  display: flex;
+  gap: 1rem;
+  height: 600px;
+  width: 100%;
+}
+
+.hot-left{
+  flex: 0 0 50%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.hot-right{
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hot-right-inner{ 
+  display: flex;
+  gap: 1rem;
+  height: 50%;
+}
+
+
+/* 4b. Flex/Grid 2D - Hot News - Grid Version */
+
+.hot-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+  height: 600px;
+}
+
+.hot-grid-1{
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.hot-grid-2{
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.hot-grid-3{
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.hot-grid-4{
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+
+
+/* 5. Grid - Masonry Layout */
+
+.masonry{
+  padding: 4rem 1rem;
+  background-color: #fff;
+}
+
+.masonry-subtitle{
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+.masonry-item{
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.masonry-item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.masonry-grid{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 200px);
+  gap: 1rem;
+  height: 600px;
+  max-width: none;
+  margin: 0 auto;
+}
+
+.item1{
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.item2{
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.item3{
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.item4{
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.item5{
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.item6{
+  grid-column: span 4;
+  grid-row: span 1;
+}
+
+.item7{
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+
+/* 6. Grid Templates - News Gallery */
+
+.gallery{
+  padding: 4rem 1rem;
+  background-color: #e0e0e0;
+}
+
+.gallery-subtitle{
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+.gallery-title{
+  margin-bottom: 1rem;
+}
+
+.gallery-item{
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  color: #666;
+}
+
+.gallery-item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.gallery-grid{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 150px);
+  gap: 1rem;
+  max-width: none;
+  grid-template-areas: 
+  "a b b c d"
+  "e e f c g"
+  "e e h h i"
+  "j k h h i"
+  "l k m n n"
+  ;
+}
+
+.a{
+  grid-area: a;
+}
+
+.b{
+  grid-area: b;
+}
+
+.c{
+  grid-area: c;
+}
+
+.d{
+  grid-area: d;
+}
+
+.e{
+  grid-area: e;
+}
+
+.f{
+  grid-area: f;
+}
+
+.g{
+  grid-area: g;
+}
+
+.h{
+  grid-area: h;
+}
+
+.i{
+  grid-area: i;
+}
+
+.j{
+  grid-area: j;
+}
+
+.k{
+  grid-area: k;
+}
+
+.l{
+  grid-area: l;
+}
+
+.m{
+  grid-area: m;
+}
+
+.n{
+  grid-area: n;
+}
+
+
+/* 7. Images and Styling */
+footer{
+  background-color: #1d1d1d;
+  color: #fff;
+}
+footer p{
+  max-width: 1500px;
+  padding: 2rem 4rem;
+  text-align: center;
+}
