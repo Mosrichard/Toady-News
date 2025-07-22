@@ -449,10 +449,34 @@ section h2 {
   grid-area: m;
 }
 
-.n{
+.n {
   grid-area: n;
+  position: relative;
+  display: inline-block;
 }
 
+/* The overlay text */
+.n::after {
+  content: "Trump Baby";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* dark transparent overlay */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show text on hover */
+.n:hover::after {
+  opacity: 1;
+}
 
 /* 7. Images and Styling */
 footer{
